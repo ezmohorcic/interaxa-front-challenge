@@ -11,7 +11,7 @@ export default function Home()
 
     return(
         <div id={css.homeCont}>
-            
+            {console.log(cardArray)}
         </div>
     )
 }

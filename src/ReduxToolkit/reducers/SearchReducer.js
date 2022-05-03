@@ -1,28 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ERROR_500, LOADING_0, NOT_FOUND_404, SUCCESS_200 } from '../consts';
+import { ERROR_500, INVALID_REQUEST, LOADING_0, NOT_FOUND_404, SUCCESS_200 } from '../consts';
 
 
 const searchSlice = createSlice({
     name: "search",
     initialState: {
         status: LOADING_0,
-        info: {},
+        results: {},
     },
     reducers: {
         searchSuccess: (state, action) =>{
-            state.status = SUCCESS_200;
-            state.info = action.payload;
+            console.log(action.payload)
+            state.status = action.payload.status;
+            state.results = action.payload.results;
         },
         searchVoid: (state) => {
-            state.status = NOT_FOUND_404
+            state.status = INVALID_REQUEST
         },
         searchFailed: (state) => {
-            state.status = ERROR_500
+            state.status = INVALID_REQUEST
         },
         searchClean: (state) => 
         {
             state.status = LOADING_0;
-            state.info = [];
+            state.results = [];
         }
     }
 });

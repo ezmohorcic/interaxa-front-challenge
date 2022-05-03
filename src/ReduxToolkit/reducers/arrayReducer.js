@@ -3,18 +3,20 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const arraySlice = createSlice({
     name: "array",
-    initialState: [],
+    initialState: {
+        array:[]
+    },
     reducers: {
         addElement: (state,action) =>
         {
-            state = [...state.array,action.payload];
+            state.array = [...state.array,action.payload];
         },
         eliminatedElement: (state,action) => {
-            state = action.payload;
+            state.array = action.payload;
         },
         cleanArr: (state) =>
         {
-            state = [];
+            state.array = [];
         }
     }
 });
