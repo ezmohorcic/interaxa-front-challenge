@@ -1,5 +1,8 @@
+import css from "./SearchHome.module.css";
+
 import React from "react";
 import { useSelector } from "react-redux";
+import SearchSelect from "../../components/SearchSelect/SearchSelect";
 
 
 export default function SearchHome()
@@ -9,6 +12,8 @@ export default function SearchHome()
     const search = useSelector( state => state.search );
 
     return(
-        <div>{console.log(search)}</div>
+        <div id={css.searchHCont}>
+            <SearchSelect/>
+        </div>
     )
 }

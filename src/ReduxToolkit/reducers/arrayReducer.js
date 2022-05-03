@@ -1,23 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ERROR_500, LOADING_0, NOT_FOUND_404, SUCCESS_200 } from '../consts';
 
 
 const arraySlice = createSlice({
-    name: "search",
-    initialState: {
-        array: [],
-    },
+    name: "array",
+    initialState: [],
     reducers: {
         addElement: (state,action) =>
         {
-            state.array = [...state.array,action.payload];
+            state = [...state.array,action.payload];
         },
         eliminatedElement: (state,action) => {
-            state.array = action.payload;
+            state = action.payload;
         },
         cleanArr: (state) =>
         {
-            state.array = [];
+            state = [];
         }
     }
 });
@@ -28,4 +25,4 @@ export const {
     cleanArr,
 } = arraySlice.actions;
 
-export const searchReducer = arraySlice.reducer;
+export const arrayReducer = arraySlice.reducer;

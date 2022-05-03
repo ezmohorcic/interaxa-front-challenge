@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from "./pages/Home.jsx";
-import SearchHome from "./pages/SearchHome.jsx";
+import Home from "./pages/Home/Home.jsx";
+import SearchHome from "./pages/SearchHome/SearchHome.jsx";
 import Navbar from "./components/NavBar/NavBar.jsx";
 
 import axios from "axios"

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { searchFailed, searchSuccess, searchVoid } from "../reducers/SearchReducer";
+import { searchFailed, searchSuccess, searchVoid } from "../reducers/searchReducer";
 
 export const searchApi = async (dispatch,search) =>
 {
