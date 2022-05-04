@@ -31,7 +31,6 @@ const SearchBar = () =>
 
         if(Object.getOwnPropertyNames(errorCheck).length )
         {
-            console.log("34")
             setError(errorCheck)
             return false
         }
@@ -43,7 +42,6 @@ const SearchBar = () =>
     {
         if(handlerError())
         {
-            console.log("40")
             searchApi(dispatch,search);
             navigate(`/search`);
         }
@@ -53,13 +51,13 @@ const SearchBar = () =>
         <div id={css.searchCont}> 
             <div className={css.searchCoordShell}>
                 <p className={css.searchCoordText}>Latitud:</p>
-                <input type="number" name="lat" className={css.searchCoord} value={search.lat} onChange={handleSearch}/>
+                <input id="lat" type="number" name="lat" className={css.searchCoord} value={search.lat} onChange={handleSearch}/>
                 <span className={css.searchError}>{error.lat? "error :c" : ""}</span>
             </div>
 
             <div className={css.searchCoordShell}>
             <p className={css.searchCoordText}>Longitud:</p>
-                <input type="number" name="lng" className={css.searchCoord} value={search.lng} onChange={handleSearch}/>
+                <input id="lng" type="number" name="lng" className={css.searchCoord} value={search.lng} onChange={handleSearch}/>
                 <span className={css.searchError}>{error.lng? "error :c" : ""}</span>
             </div>
 
@@ -89,7 +87,7 @@ const SelfLocate = () =>
     {
         const today = new Date();
         const successPos = (position) => searchApi(dispatch,{lat:position.coords.latitude,lng:position.coords.longitude,date:`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`});
-        const lng = navigator.geolocation.getCurrentPosition(successPos);     
+        navigator.geolocation.getCurrentPosition(successPos);     
         navigate(`/search`);
 
     }
