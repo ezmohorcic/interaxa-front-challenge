@@ -3,6 +3,7 @@ import css from "./Home.module.css";
 import React from "react";
 import { useSelector } from "react-redux";
 import Card from "../../components/Card/Card";
+import EmptyArray from "../../components/Helpers/EmptyArray";
 
 export default function Home()
 {
@@ -14,7 +15,7 @@ export default function Home()
 
 
     //RETURNS FOR STATUS
-    if(!cardArray.length) return <div> No bitches? </div>
+    if(!cardArray.length) return <EmptyArray/>
 
     return(
         <div id={css.homeCont}>
