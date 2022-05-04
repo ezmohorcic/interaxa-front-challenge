@@ -10,7 +10,6 @@ const searchSlice = createSlice({
     },
     reducers: {
         searchSuccess: (state, action) =>{
-            console.log(action.payload)
             state.status = action.payload.status;
             state.results = action.payload.results;
         },

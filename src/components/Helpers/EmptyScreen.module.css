@@ -1,0 +1,44 @@
+#emptyCont{
+    width: 100%;
+    height: 90vh;
+}
+
+
+
+#skyShell{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 70%;
+    contain: paint;
+}
+.svgShell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 600px;
+    height: 50px;
+
+    font-size: 50px;
+}
+.svgShell >svg{
+    color: #D4F4DD;
+}
+
+
+#groundShell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 30%;
+
+    background-color: #1b1309;
+
+    font-size: 20px;
+    
+}   

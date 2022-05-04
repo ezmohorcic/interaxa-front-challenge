@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+export const coordFilter = (lat,lng) => (element) => element.lat===lat && element.lng===lng;
+export const coordInvFilter = (lat,lng) => (element) => element.lat!==lat || element.lng!==lng;
 
 const arraySlice = createSlice({
     name: "array",
@@ -11,8 +13,10 @@ const arraySlice = createSlice({
         {
             state.array = [...state.array,action.payload];
         },
-        eliminatedElement: (state,action) => {
-            state.array = action.payload;
+        eliminatedElement: (state,{ payload }) => 
+        {
+            const arrayFilter= coordInvFilter(payload.lat,payload.lng);
+            state.array = state.array.filter(arrayFilter);
         },
         cleanArr: (state) =>
         {

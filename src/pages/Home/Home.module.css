@@ -1,0 +1,9 @@
+#homeCont{
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 90vh;
+
+    overflow-y: scroll;
+}

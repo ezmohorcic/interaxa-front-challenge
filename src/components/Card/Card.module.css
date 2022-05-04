@@ -1,0 +1,105 @@
+.cardCont{
+    display: flex;
+    flex-direction: column;
+
+    width: 20vw;
+    height: fit-content;
+
+    margin: auto;
+
+    border-radius: 2vw;
+}
+
+
+.coordCont{
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 90%;
+    height: 3vh;
+    margin: 0 5% 0 5%;
+
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+
+    background-color: #4f0325b6;
+    color: white;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+.coordCont:hover{
+
+    background-color: #4f0325;
+}
+.coordText{
+    height: 3vh;
+    margin: 0.5vh 0 0.5vh 0;
+
+    text-align: center;
+    font-weight: bold;
+    color: #FEE0ED;
+}
+.coordText > span{
+    font-style: italic;
+    color: #F72585;
+}
+
+.sunCont{
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 5vh;
+
+    border-top-left-radius: 0.2vw;
+    border-top-right-radius: 0.2vw;
+
+    background: linear-gradient(90deg, rgba(86,11,173,1) 10%, rgba(255,213,0,1) 90%);
+}
+
+
+.lengthCont{
+    border-top: 2px solid #8a054155;
+    background: linear-gradient(90deg, rgba(86,11,173,1) 10%, rgba(255,213,0,1) 90%);
+    text-align: center;
+}
+.lengthTitle{
+    margin: 0.5vh;
+    color: #493D00;
+    font-weight: bold;
+}
+.lengthText{
+    margin: 0.5vh;
+}
+
+
+.buttonCont{
+    width: 100%;
+    height: 4vh;
+}
+
+.deleteBut{
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid #1b1309;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+
+    box-shadow: 0 0 0 inset #FCA2CA;
+    background-color: transparent;
+    color: #3B021C;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.deleteBut:hover{
+    border-color: #F72585;
+
+    box-shadow: 0 0 15vw inset transparent;
+    background-color: #F72585;
+    color: #1b1309;
+}

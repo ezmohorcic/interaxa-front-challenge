@@ -25,3 +25,5 @@ export default function App() {
     );
 
 }
+
+//  COLOR PALETTE: https://coolors.co/palette/560bad-7209b7-f72585-fdc500-ffd500
