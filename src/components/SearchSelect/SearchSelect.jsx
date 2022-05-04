@@ -58,7 +58,7 @@ const SearchSelect = () =>
     const search = useSelector( state => state.search.results);
     const status = useSelector( state => state.search.status);
     const array = useSelector ( state => state.array.array);
-    console.log(search)
+    
     //HANDLERS
     const handleAdd = () =>
     {
