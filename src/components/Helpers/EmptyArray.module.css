@@ -39,13 +39,13 @@
 
 #smallCloud1{
     position: relative;
-    top: 10vh;
+    top: 8vh;
     left: -15vw;
     font-size: 3vw;
 }
 #smallCloud2{
     position: relative;
-    top: 17vh;
+    top: 14 vh;
     left: 24vw;
     font-size: 4vw;
 }
@@ -64,8 +64,8 @@
 
 #moon{
     position: relative;
-    top: 45vh;
-    left: 40vw;
+    top: 18vh;
+    left: 28vw;
 
     font-size: 3vw;
     color: #560BAD;
