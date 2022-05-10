@@ -72,8 +72,9 @@ const SearchSelect = () =>
                     {infoShow}
                 </div>
 
-                <div id={css.twilightTabsCont}>{twilightTabs}</div>
-
+                <div id={css.twilightTabsCont}>
+                    {twilightTabs}
+                </div>
 
                 <div id={css.lowerShell}>
                    <InfoShell name="sunrise" shell="upperShell" cont={info.sunrise}/>

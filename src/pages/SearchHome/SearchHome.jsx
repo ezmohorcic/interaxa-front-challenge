@@ -17,17 +17,14 @@ export default function SearchHome()
     const dispatch = useDispatch();
 
     //HANDLERS
-    const handleCancel = () =>
+    const handle_cancel = () =>
     {
         dispatch(searchClean());
         navigate("/");
     }
 
-    //REDUX
-    const search = useSelector( state => state.search );
-
     return(
-        <main onClick={handleCancel} id={css.searchHCont}>
+        <main onClick={handle_cancel} id={css.searchHCont}>
             <SearchSelect/>
         </main>
     )
