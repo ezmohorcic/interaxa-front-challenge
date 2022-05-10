@@ -21,11 +21,9 @@ const Card = ({inner}) =>
     const dispatch = useDispatch();
  
     //HANDLERS
-    const handleDelete = () =>
-    {
-        dispatch( eliminatedElement({lat,lng}) )
-    }
-    const handleSearch = () =>
+    const handle_delete = () => dispatch( eliminatedElement({lat,lng}) )
+    
+    const handle_search = () =>
     {
         dispatch(searchSuccess({results:inner,status:OK}))
         navigate("/search")
@@ -35,7 +33,7 @@ const Card = ({inner}) =>
     return(
         <article className={css.cardCont}>
 
-            <div onClick={handleSearch} className={css.coordCont}>
+            <div onClick={handle_search} className={css.coordCont}>
                 <p className={css.coordText}> <span>lat: </span> {lat} </p>
                 <p className={css.coordText}> <span>lng: </span> {lng} </p>
             </div>
@@ -50,7 +48,8 @@ const Card = ({inner}) =>
                 <p className={css.lengthText}>{day_length} hs</p>
             </div>
 
-            <button className={css.deleteBut} onClick={handleDelete}> <FontAwesomeIcon icon={ faTimes }/> </button>
+            <button className={css.deleteBut} onClick={handle_delete}> <FontAwesomeIcon icon={ faTimes }/> </button>
+            
         </article>
     )
 }

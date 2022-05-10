@@ -27,8 +27,8 @@ export default function SearchHome()
     const search = useSelector( state => state.search );
 
     return(
-        <div onClick={handleCancel} id={css.searchHCont}>
+        <main onClick={handleCancel} id={css.searchHCont}>
             <SearchSelect/>
-        </div>
+        </main>
     )
 }

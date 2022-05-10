@@ -18,8 +18,8 @@ export default function Home()
     if(!cardArray.length) return <EmptyArray/>
 
     return(
-        <div id={css.homeCont}>
+        <main id={css.homeCont}>
             {arrShow}
-        </div>
+        </main>
     )
 }

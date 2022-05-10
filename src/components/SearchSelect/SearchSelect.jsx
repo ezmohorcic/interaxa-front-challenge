@@ -18,16 +18,6 @@ const namesTwArr = ["civil","nautical","astronomical"];
 const namesInfArr = ["sunrise","day_length","sunset","solar_noon"];
 
 
-const TwilightShell = ({begin,end,of}) =>
-{
-    return(
-        <div className={css.twilightInner}>
-            <p id={css.moonSide} className={css.twilightText}>{begin}</p>
-            <h2 className={css.twilightText}>{of}</h2>
-            <p id={css.solarSide} className={css.twilightText}>{end}</p>
-        </div>
-    )
-}
 const InfoShell = ({name,shell,cont}) =>
 {
     return(
@@ -37,12 +27,8 @@ const InfoShell = ({name,shell,cont}) =>
         </div>
     )
 }
-const TwilightTab = ({handler,state,name}) =>
-{
-    return(
-        <div onMouseEnter={()=>handler(state)} onMouseLeave={()=>handler({})} className={css.twilightTab}>{name}</div>
-    )
-}
+const TwilightTab = ({handler,state,name}) => <div onMouseEnter={()=>handler(state)} onMouseLeave={()=>handler({})} className={css.twilightTab}>{name}</div>
+
 
 const SearchSelect = () =>
 {
@@ -60,7 +46,7 @@ const SearchSelect = () =>
     const array = useSelector ( state => state.array.array);
     
     //HANDLERS
-    const handleAdd = () =>
+    const handle_add = () =>
     {
         const arrayFilter = coordFilter(search.lat,search.lng);
         if(!array.filter(arrayFilter).length) dispatch(addElement(search));
@@ -95,7 +81,7 @@ const SearchSelect = () =>
                 </div>
 
             </div>
-            <button id={css.addBut} onClick={handleAdd}> <FontAwesomeIcon icon={ faPlus }/> </button>
+            <button id={css.addBut} onClick={handle_add}> <FontAwesomeIcon icon={ faPlus }/> </button>
         </article>
     )
 }
