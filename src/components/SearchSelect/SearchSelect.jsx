@@ -70,7 +70,6 @@ const SearchSelect = () =>
     }
 
     //VARIABLES FOR SHOW
-    const twilightShow = namesTwArr.map((element,index) => <TwilightShell key={"twilightShell_"+index} begin={search[`${element}_twilight_begin`]} of={element} end={search[`${element}_twilight_end`]} />)
     const infoShow = namesInfArr.map((element,index) =><InfoShell key={"infoShell_"+index} name={element} shell={index%2 ? "middleShell" : "upperShell" } cont={search[element]}/>)
     const twilightTabs = namesTwArr.map((element,index) => <TwilightTab key={"twilightTab_"+index} handler={setInfo} name={element} state={{sunrise:search[`${element}_twilight_begin`],sunset:search[`${element}_twilight_end`]}}/> )
 
@@ -79,7 +78,7 @@ const SearchSelect = () =>
     if(status===INVALID_REQUEST) return (<EmptyScreen/>)
 
     return(
-        <div id={css.searchCont}>
+        <article id={css.searchCont}>
             
             <div id={css.infoCont}>
 
@@ -89,10 +88,7 @@ const SearchSelect = () =>
 
                 <div id={css.twilightTabsCont}>{twilightTabs}</div>
 
-                {/* <div id={css.twilightCont}>
-                    <div id={css.titleTwighlight}><h3>sunrise</h3><h3>sunset</h3></div>
-                    {twilightShow}
-                </div> */}
+
                 <div id={css.lowerShell}>
                    <InfoShell name="sunrise" shell="upperShell" cont={info.sunrise}/>
                    <InfoShell name="sunset"  shell="upperShell" cont={info.sunset}/> 
@@ -100,7 +96,7 @@ const SearchSelect = () =>
 
             </div>
             <button id={css.addBut} onClick={handleAdd}> <FontAwesomeIcon icon={ faPlus }/> </button>
-        </div>
+        </article>
     )
 }
 

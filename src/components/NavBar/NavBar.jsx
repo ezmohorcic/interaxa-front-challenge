@@ -36,7 +36,6 @@ const SearchBar = () =>
         }
         else return true;
     }
-    const handleFormatted = () => setSearch( { ...search,formatted:!search["formatted"] });
     const handleSearch = (e) => setSearch({...search,[e.target.getAttribute("name")]:e.target.value.trim()});
     const handleSubmit = () =>
     {
@@ -48,7 +47,7 @@ const SearchBar = () =>
     }
 
     return(
-        <div id={css.searchCont}> 
+        <header id={css.searchCont}> 
             <div className={css.searchCoordShell}>
                 <p className={css.searchCoordText}>Latitud:</p>
                 <input id="lat" type="number" name="lat" className={css.searchCoord} value={search.lat} onChange={handleSearch}/>
@@ -69,7 +68,7 @@ const SearchBar = () =>
             <div id={css.butShell}>
                 <button id={css.searchBut} onClick={handleSubmit}><FontAwesomeIcon icon={ faSearch }/></button>
             </div>
-        </div>
+        </header>
     )
 }
 

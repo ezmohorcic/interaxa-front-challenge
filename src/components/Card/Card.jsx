@@ -33,7 +33,7 @@ const Card = ({inner}) =>
 
 
     return(
-        <div className={css.cardCont}>
+        <article className={css.cardCont}>
 
             <div onClick={handleSearch} className={css.coordCont}>
                 <p className={css.coordText}> <span>lat: </span> {lat} </p>
@@ -49,8 +49,9 @@ const Card = ({inner}) =>
                 <h3 className={css.lengthTitle}>length:</h3>
                 <p className={css.lengthText}>{day_length} hs</p>
             </div>
-            <div className={css.buttonCont}><button className={css.deleteBut} onClick={handleDelete}> <FontAwesomeIcon icon={ faTimes }/> </button></div>
-        </div>
+
+            <button className={css.deleteBut} onClick={handleDelete}> <FontAwesomeIcon icon={ faTimes }/> </button>
+        </article>
     )
 }
 
